@@ -7,3 +7,8 @@
 body {
   background-color: rgb(121, 202, 202);
 }
+
+input {
+  padding: 0.5rem;
+  background-color: beige;
+}
