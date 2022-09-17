@@ -2,16 +2,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className='container my-5'>
+    <div>
       <form>
-        <div className='my-3'>
-          <label htmlFor='input-temp' classname='form-label'>
+        <div>
+          <label htmlFor='input-temp'>
             Input Temperature
           </label>
           <input
             id="input-temp"
             name="input-temp"
-            className='form-control'
           />
         </div>
       </form>      
