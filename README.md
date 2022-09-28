@@ -1,5 +1,9 @@
-[Live App](https://ornate-chaja-fd77bd.netlify.app/)
-[Dev Environment](https://dev--ornate-chaja-fd77bd.netlify.app/)
+## Environments
+
+Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
+
+- [Live App](https://ornate-chaja-fd77bd.netlify.app/)
+- [Dev Environment](https://dev--ornate-chaja-fd77bd.netlify.app/)
 
 
 # Getting Started with Create React App
