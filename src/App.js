@@ -43,12 +43,12 @@ function App() {
         <h1 className='center'>BMI Calculator</h1>
         <form onSubmit={calcBmi}>
           <div>
-            <label>Weight (kg)</label>
-            <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+            <label htmlFor='weight'>Weight (kg)</label>
+            <input id="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <div>
-            <label>Height (metres)</label>
-            <input value={height} onChange={(e) => setHeight(e.target.value)} />
+            <label htmlFor='height'>Height (metres)</label>
+            <input id="height" value={height} onChange={(e) => setHeight(e.target.value)} />
           </div>
           <div>
             <button className='btn' type='submit'>Submit</button>
