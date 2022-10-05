@@ -1,10 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test("the initial input box is empty", ()=>{
+test("the weight input box is in the DOM", ()=>{
+  
   render(<App/>);
-  expect(celsiusInput.value).toBe('');//Checks that initial input box value is an empty string
-  //expect(celsiusInput).toHaveStyle({backgroundColor: "beige"})
+  const weightInput = screen.getByLabelText(/weight/i);
+  expect(weightInput.value).toBeDefined();
+  
 });
 
-
+test("the height input box is in the DOM", ()=>{
+  
+  render(<App/>);
+  const heightInput = screen.getByLabelText(/height/i);
+  expect(heightInput.value).toBeDefined();
+  
+});
