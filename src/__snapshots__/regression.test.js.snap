@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checks that App Dom renders correctly 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="center"
+    >
+      BMI Calculator
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <div>
+        <label>
+          Weight (kg)
+        </label>
+        <input
+          onChange={[Function]}
+          value={0}
+        />
+      </div>
+      <div>
+        <label>
+          Height (metres)
+        </label>
+        <input
+          onChange={[Function]}
+          value={0}
+        />
+      </div>
+      <div>
+        <button
+          className="btn"
+          type="submit"
+        >
+          Submit
+        </button>
+        <button
+          className="btn btn-outline"
+          onClick={[Function]}
+          type="submit"
+        >
+          Reload
+        </button>
+      </div>
+    </form>
+    <div
+      className="center"
+    >
+      <h2>
+        Your BMI is: 
+      </h2>
+      <p />
+    </div>
+    <div
+      className="img-container"
+    >
+      <img
+        alt=""
+        src=""
+      />
+    </div>
+  </div>
+</div>
+`;
