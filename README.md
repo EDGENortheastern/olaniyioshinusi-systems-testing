@@ -1,4 +1,14 @@
-## Environments
+# About
+
+The Body Mass Index (BMI) calculator is an application that allows the user to measure their body fat based on their height and weight. This gives the user the ability to work out if they are of a healthy weight based on how tall the user is and it applies to both adult men and women.
+This BMI calculator will give you an estimated number rounded to two decimal places. Below are some of the key features I aim to display.
+- Inputs that the BMI Calculator will accept.
+- Outputs that the BMI Calculator will display.
+- Accuracy testing that the value displayed is indeed correct.
+- A clickable button to give the user a result. 
+
+
+# Environments
 
 Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
 
