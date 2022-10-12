@@ -4,8 +4,8 @@ import './App.css';
 function App() {
 
   // state
-  const [weight, setWeight] = useState(0)
-  const [height, setHeight] = useState(0)
+  const [weight, setWeight] = useState("")
+  const [height, setHeight] = useState("")
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
 

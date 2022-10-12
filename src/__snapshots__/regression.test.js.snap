@@ -16,21 +16,27 @@ exports[`checks that App Dom renders correctly 1`] = `
       onSubmit={[Function]}
     >
       <div>
-        <label>
+        <label
+          htmlFor="weight"
+        >
           Weight (kg)
         </label>
         <input
+          id="weight"
           onChange={[Function]}
-          value={0}
+          value=""
         />
       </div>
       <div>
-        <label>
+        <label
+          htmlFor="height"
+        >
           Height (metres)
         </label>
         <input
+          id="height"
           onChange={[Function]}
-          value={0}
+          value=""
         />
       </div>
       <div>
