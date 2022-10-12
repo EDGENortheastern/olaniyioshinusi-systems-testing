@@ -56,9 +56,9 @@ function App() {
           </div>
         </form>
 
-        <div className='center'>
+        <div className='center' role = 'article'>
           <h2>Your BMI is: {bmi}</h2>
-          <p>{message}</p>
+          <p data-testid='output'>{message}</p>
         </div>
 
         <div className='img-container'>
