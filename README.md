@@ -1,4 +1,6 @@
-# About
+# Coursework for Systems Testing
+
+## About
 
 The Body Mass Index (BMI) calculator is an application that allows the user to measure their body fat based on their height and weight. This gives the user the ability to work out if they are of a healthy weight based on how tall the user is and it applies to both adult men and women.
 This BMI calculator will give you an estimated number rounded to two decimal places. Below are some of the key features I aim to display.
@@ -7,8 +9,21 @@ This BMI calculator will give you an estimated number rounded to two decimal pla
 - Accuracy testing that the value displayed is indeed correct.
 - A clickable button to give the user a result. 
 
+## :heavy_exclamation_mark: Prerequisites
 
-# Environments
+This project requires npm to execute the files, so ensure that it is installed.
+
+### 1. Ensure node and npm are installed by running the following commands in your terminal:
+
+```sh
+node -v
+```
+
+```sh
+npm -v
+```
+
+## Environments
 
 Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
 
@@ -16,7 +31,7 @@ Project has two environments, the Production environment and the Development env
 - [Dev Environment](https://dev--ornate-chaja-fd77bd.netlify.app/)
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
