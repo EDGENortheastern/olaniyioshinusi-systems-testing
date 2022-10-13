@@ -9,8 +9,6 @@ function App() {
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
 
-  let imgSrc = ''
-
   let calcBmi = (event) => {
     //prevent submitting, e=event
     event.preventDefault()
@@ -41,7 +39,7 @@ function App() {
     <div className="app">
       <div className='container'>
         <h1 className='center'>BMI Calculator</h1>
-        <form onSubmit={calcBmi}>
+        <form onSubmit={calcBmi} data-testid='form'>
           <div>
             <label htmlFor='weight'>Weight (kg)</label>
             <input id="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
@@ -56,13 +54,9 @@ function App() {
           </div>
         </form>
 
-        <div className='center'>
+        <div className='center' role = 'article'>
           <h2>Your BMI is: {bmi}</h2>
-          <p>{message}</p>
-        </div>
-
-        <div className='img-container'>
-          <img src={imgSrc} alt=''></img>
+          <p data-testid='output'>{message}</p>
         </div>
       </div>        
     </div>
