@@ -122,6 +122,48 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ---
 
+# 💻 Coding Practice 
+Throughout this project I ensured that the code is easily readable, whilst still maintaining the correct naming conventions; by using the camelCase practice throughout the entire code, and while still making sure that that all lines are correctly indented, ensuring that any other programmer could still read and understand the code. Furthermore, the code also has comments on every line of code to ensure that anyone can understand what is happening at every step of the code. I also made sure the code had the correct indentations throughout the entire code.
+
+### camelCase
+
+### Comments
+
+---
+
+### 📷 Regression Testing 
+
+I used regression testing to maintain code base consistency. Regression testing creates a snapshot of the DOM (HTML) for each of the components, if any of those components change it will throw an error if not the test will pass.
+
+### 📖 React Testing library 
+![react testing library image](https://user-images.githubusercontent.com/90607602/149968583-1f49f002-711b-4ca7-9be0-a31edd29d1e8.png)
+
+The react testing library is used for testing the UI in units. This is because react testing library is a set of helper functions that allow us to test React components without relying on their implementation details.
+
+### Testing Logic 
+
+For testing the logic of the website I used react testing library's Jest. Jest (standalone) is utilised to test the logic of the application, this is because Jest is an javascript testing framework designed with simplicity in mind and Jest supports projects coded using Babel, Typescript, Node, **React**, Angular, Vue and more; Making Jest an ideal testing framework for my project. I produced testing blocks that lead to huge code coverage using Jest within a short period of time. Unit testing using Jest makes my project more agile as it allows me to be assured that the code I have will not break easily as I have already found and prevented bugs earlier in the development cycle.
+
+### End-to-End Testing
+
+Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol. I used Puppeteer to automate End-to-End testing. I have also integrated React E2E Testing with Puppeteer into a GitHub action, which allowed me to test my code with Puppeteer whenever I push or make a pull request.
+
+## Manual Testing
+
+Manual testing was completed on the application. The purpose of Manual Testing is to identify any bugs, issues, or defects in the website. Manual software testing helps to find critical bugs in the website design such as features not working as intended or not working at all. This allows to debug the website and improve features which did not have necessary code implemented to fix specific bugs which may occur when the user is using my BMI calculator to calculate body mass index. Although Manual website Testing requires more effort, I realised it was imperative to check automation feasibility; Additionally, Manual Testing concepts do not require knowledge of any testing tool.
+
+### Resolution of an Issue
+
+This is an example of an issue which was discovered while manually testing the design.
+
+## Continuous Integration / Continuous Deployment
+
+Netlify is used to continuously deploy my code or any changes, every time I push to the main branch, the website goes live with a new version. When a pull request is made in my workflow, netflify also checks if there are any warnings, and makes a preview for that specific pull request. This is beneficial because Netlify is incredibly quick and easy to use for getting started with my website, saving time and increasing productivity as a result. Netlify will also save more time as you can lock onto a main branch for main deployments. It can also deploy other branches and give you a URL to test those deploys, improving the amount of time it takes for you test your code before merging it to your main; Also giving you an easier option to manually test other branches. 
+
+## GitHub Actions 
+
+GitHub Actions is used to automate the testing pipeline every time code is pushed or a request is made. This allowed me to create workflows that build and test every pull request to the repository, or deploy my merged pull requests to production. GitHub Actions also helped improve my workflow by automatically adding the appropriate labels.
+
 ## Environments
 
 Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
