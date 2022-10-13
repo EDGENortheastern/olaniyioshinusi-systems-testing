@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`checks that App Dom renders correctly 1`] = `
+exports[`checks that the App DOM is consistent 1`] = `
 <div
   className="app"
 >

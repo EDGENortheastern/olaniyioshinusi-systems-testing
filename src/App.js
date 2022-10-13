@@ -9,8 +9,6 @@ function App() {
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
 
-  let imgSrc = ''
-
   let calcBmi = (event) => {
     //prevent submitting, e=event
     event.preventDefault()
@@ -59,10 +57,6 @@ function App() {
         <div className='center' role = 'article'>
           <h2>Your BMI is: {bmi}</h2>
           <p data-testid='output'>{message}</p>
-        </div>
-
-        <div className='img-container'>
-          <img src={imgSrc} alt=''></img>
         </div>
       </div>        
     </div>

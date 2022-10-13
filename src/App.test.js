@@ -1,5 +1,17 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
+
+// Imports component
 import App from './App';
+
+/* These regression tests whether the DOM remains the same
+or has changed. If there is a change and it is intentional,
+then the snapshot for the change must be updated. */
+
+it('checks that the App DOM is consistent', () => {
+  const appTree = renderer.create(<App/>).toJSON();
+  expect(appTree).toMatchSnapshot();
+});
 
 test("the weight input box is in the DOM", () => {
   
