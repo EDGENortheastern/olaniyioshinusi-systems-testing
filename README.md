@@ -2,18 +2,32 @@
 
 ## About
 
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/90407109/195615218-576a7c95-10fd-44f7-a54c-11a1f6cb7b35.jpg" width="554" height="399">
+
+</div>
+
 The Body Mass Index (BMI) calculator is an application that allows the user to measure their body fat based on their height and weight. This gives the user the ability to work out if they are of a healthy weight based on how tall the user is and it applies to both adult men and women.
 This BMI calculator will give you an estimated number rounded to two decimal places. Below are some of the key features I aim to display.
 - Inputs that the BMI Calculator will accept.
 - Outputs that the BMI Calculator will display.
 - Accuracy testing that the value displayed is indeed correct.
-- A clickable button to give the user a result. 
+- A clickable button to give the user a result.
+
+## Environments
+
+Project has two environments, the Production environment and the Development environment. I tested features in the development environment.
+
+- [Live App](https://ornate-chaja-fd77bd.netlify.app/)
+- [Dev Environment](https://dev--ornate-chaja-fd77bd.netlify.app/)
 
 ## 💼 Project Management 
 
 <div align="center">
 
-![]()
+<img src="https://user-images.githubusercontent.com/90407109/195608547-a226d783-9dca-4c58-b3a5-a77721829563.jpg" width="554" height="399">
+
 </div>
 
 I used GitHub's Project Tracker for project management to manage issues and used the kanban methodology to maintain a workflow where I could continuously improve, visualise my workflow on a regular basis and sort tasks in order of priority.
@@ -127,7 +141,11 @@ Throughout this project I ensured that the code is easily readable, whilst still
 
 ### camelCase
 
+<img src="https://user-images.githubusercontent.com/90407109/195615304-6d5a11ff-dae2-4f13-9aa9-c219c93b7e8e.jpg" width="554" height="399">
+
 ### Comments
+
+<img src="https://user-images.githubusercontent.com/90407109/195615374-722bd2c8-531f-4ed1-a7d4-fdc4ec5d4b8a.jpg" width="554" height="399">
 
 ---
 
@@ -169,13 +187,6 @@ GitHub Actions is used to automate the testing pipeline every time code is pushe
 ### For additional examples of GitHub Actions click [here](https://docs.github.com/en/actions)
 
 ---
-
-## Environments
-
-Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
-
-- [Live App](https://ornate-chaja-fd77bd.netlify.app/)
-- [Dev Environment](https://dev--ornate-chaja-fd77bd.netlify.app/)
 
 ## Learn More
 
