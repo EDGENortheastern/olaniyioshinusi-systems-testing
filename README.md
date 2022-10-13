@@ -204,6 +204,9 @@ This is an example of an issue which was discovered while manually testing the d
 
 </div>
 
+![NetlifyScreenshot](https://user-images.githubusercontent.com/90407109/195656455-40630bb7-e869-43d9-9587-14149a2065a1.jpg)
+
+
 Netlify is used to continuously deploy my code or any changes, every time I push to the main branch, the website goes live with a new version. When a pull request is made in my workflow, netflify also checks if there are any warnings, and makes a preview for that specific pull request. This is beneficial because Netlify is incredibly quick and easy to use for getting started with my website, saving time and increasing productivity as a result. Netlify will also save more time as you can lock onto a main branch for main deployments. It can also deploy other branches and give you a URL to test those deploys, improving the amount of time it takes for you test your code before merging it to your main; Also giving you an easier option to manually test other branches. 
 
 ## GitHub Actions 
