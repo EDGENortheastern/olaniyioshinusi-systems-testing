@@ -1,5 +1,7 @@
 # Coursework for Systems Testing
 
+[![Node.js CI](https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml/badge.svg)](https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml)
+
 ## About
 
 <div align="center">
