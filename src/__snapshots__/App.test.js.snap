@@ -13,6 +13,7 @@ exports[`checks that the App DOM is consistent 1`] = `
       BMI Calculator
     </h1>
     <form
+      data-testid="form"
       onSubmit={[Function]}
     >
       <div>

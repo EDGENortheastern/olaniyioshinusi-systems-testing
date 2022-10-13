@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import userEvent from '@testing-library/user-event';
 
 // Imports component
 import App from './App';
@@ -75,4 +76,36 @@ test("that output paragraph exists in the DOM", () => {
   const pOutput = screen.getByTestId("output");
   expect(pOutput).toBeInTheDocument();
   
+});
+
+test("the we can type in height input box", () => {
+  
+  render(<App/>);
+  const heightInput = screen.getByLabelText(/height/i);
+  userEvent.type(heightInput, '173');
+  console.log(heightInput.value);
+  expect(heightInput.value).not.toBe('');
+  expect(heightInput.value).toBe('173');
+});
+
+test("that we can type in weight input box", () => {
+  
+  render(<App/>);
+  const weightInput = screen.getByLabelText(/weight/i);
+  userEvent.type(weightInput, '79');
+  expect(weightInput.value).toBe('79');
+});
+
+test("that BMI calculates correctly", () => {
+  
+  render(<App/>);
+  const heightInput = screen.getByLabelText(/height/i);
+  userEvent.type(heightInput, '173');
+  const weightInput = screen.getByLabelText(/weight/i);
+  userEvent.type(weightInput, '79');
+  expect(weightInput.value).toBe('79');
+  const frmSubmit = screen.getByTestId('form');
+  fireEvent.submit(frmSubmit);
+  const utput = screen.getByText(/You are/i);
+  expect(utput).toBeInTheDocument();
 });

@@ -39,7 +39,7 @@ function App() {
     <div className="app">
       <div className='container'>
         <h1 className='center'>BMI Calculator</h1>
-        <form onSubmit={calcBmi}>
+        <form onSubmit={calcBmi} data-testid='form'>
           <div>
             <label htmlFor='weight'>Weight (kg)</label>
             <input id="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
