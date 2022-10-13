@@ -164,6 +164,12 @@ Netlify is used to continuously deploy my code or any changes, every time I push
 
 GitHub Actions is used to automate the testing pipeline every time code is pushed or a request is made. This allowed me to create workflows that build and test every pull request to the repository, or deploy my merged pull requests to production. GitHub Actions also helped improve my workflow by automatically adding the appropriate labels.
 
+<img src="https://user-images.githubusercontent.com/90407109/195565469-b888fa80-296c-426c-a819-37df7ab5d26f.jpg" width="554" height="399">
+
+### For additional examples of GitHub Actions click [here](https://docs.github.com/en/actions)
+
+---
+
 ## Environments
 
 Project has two environments, the Production environment and the Development environment. The testing team will be testing features in the development environment.
