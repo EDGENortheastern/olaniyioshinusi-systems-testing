@@ -13,7 +13,8 @@ This BMI calculator will give you an estimated number rounded to two decimal pla
 
 <div align="center">
 
-![]()
+<img src="https://user-images.githubusercontent.com/90407109/195608547-a226d783-9dca-4c58-b3a5-a77721829563.jpg" width="554" height="399">
+
 </div>
 
 I used GitHub's Project Tracker for project management to manage issues and used the kanban methodology to maintain a workflow where I could continuously improve, visualise my workflow on a regular basis and sort tasks in order of priority.
