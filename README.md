@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/90407109/195615218-576a7c95-10fd-44f7-a54c-11a1f6cb7b35.jpg" width="554" height="399">
+<img src="https://user-images.githubusercontent.com/90407109/195615218-576a7c95-10fd-44f7-a54c-11a1f6cb7b35.jpg">
 
 </div>
 
@@ -141,11 +141,11 @@ Throughout this project I ensured that the code is easily readable, whilst still
 
 ### camelCase
 
-<img src="https://user-images.githubusercontent.com/90407109/195615304-6d5a11ff-dae2-4f13-9aa9-c219c93b7e8e.jpg" width="554" height="399">
+![camelCase](https://user-images.githubusercontent.com/90407109/195651654-9528187a-bcc9-4db0-8e80-462b8e94c9d3.jpg)
 
 ### Comments
 
-<img src="https://user-images.githubusercontent.com/90407109/195615374-722bd2c8-531f-4ed1-a7d4-fdc4ec5d4b8a.jpg" width="554" height="399">
+![CommentImage](https://user-images.githubusercontent.com/90407109/195651690-8f7d671b-4bff-4ff8-84b2-f66a6cfee99b.jpg)
 
 ---
 
@@ -153,7 +153,8 @@ Throughout this project I ensured that the code is easily readable, whilst still
 
 I used regression testing to maintain code base consistency. Regression testing creates a snapshot of the DOM (HTML) for each of the components, if any of those components change it will throw an error if not the test will pass.
 
-### 📖 React Testing library 
+### 📖 React Testing library
+
 ![react testing library image](https://user-images.githubusercontent.com/90607602/149968583-1f49f002-711b-4ca7-9be0-a31edd29d1e8.png)
 
 The react testing library is used for testing the UI in units. This is because react testing library is a set of helper functions that allow us to test React components without relying on their implementation details.
@@ -166,6 +167,25 @@ For testing the logic of the website I used react testing library's Jest. Jest (
 
 Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol. I used Puppeteer to automate End-to-End testing. I have also integrated React E2E Testing with Puppeteer into a GitHub action, which allowed me to test my code with Puppeteer whenever I push or make a pull request.
 
+## Performance and Accessibility Testing
+
+In order to improve the quality of the webpage, I used the Google Lighthouse tool to generate a report containing a summary of the quality of our application. Lighthouse is a free and open-source tool that can be accessed through the development console for Chromium-based browsers. There are 4 metrics which I have focussed on which are: 
+
+- Performance which is an aggregation of how the page progressed in aspects such as loading speed, time taken for loading basic frames and displaying meaningful content. 
+- Accessibility which is an aggregation of how accessible the website is through audio captions, button names and 'aria-' attributes.
+- Best Practices which is an aggregation of many practices that have been deemed 'best' such as use of HTTPS and avoiding the use of deprecated code.
+- SEO which is an aggregation of scores in features such as meta description, presence of titles, legible font sizes.
+
+The websites performance rating of 100 suggests it is highly optimised and as a result, the website will offer a streamlined and smoother experience giving the user a better experience as a whole when using our website, it also decreases the bounce rate of users who attempt to access the website incase it takes too long to load. Poor performance hurts the overall user experience and offers less incentive to stay. 
+
+The accessibility rating of 100 improves our search engine optimisation results and makes it easier for each user to use the website regardless of age or disabililty. The website's design also includes contrasting colours. Users would be able to interact with the website/application properly without any problems while accessing it.  
+
+The best practices rating of 100 suggests that the websites design is simple and easy to navigate. 
+
+The search engine optimisation (SEO) rating of 100 is suggests the websites design attracts higher quality internet traffic and traffic will be directed to the website naturally without having to advertise it. 
+
+![DesktopAccessibilityPerformanceSEO](https://user-images.githubusercontent.com/90407109/195648614-1e60455c-f2e5-44ec-90dc-ed4afbe01da3.jpg)
+
 ## Manual Testing
 
 Manual testing was completed on the application. The purpose of Manual Testing is to identify any bugs, issues, or defects in the website. Manual software testing helps to find critical bugs in the website design such as features not working as intended or not working at all. This allows to debug the website and improve features which did not have necessary code implemented to fix specific bugs which may occur when the user is using my BMI calculator to calculate body mass index. Although Manual website Testing requires more effort, I realised it was imperative to check automation feasibility; Additionally, Manual Testing concepts do not require knowledge of any testing tool.
@@ -175,6 +195,12 @@ Manual testing was completed on the application. The purpose of Manual Testing i
 This is an example of an issue which was discovered while manually testing the design.
 
 ## Continuous Integration / Continuous Deployment
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/90607671/150118179-7c55890f-1df7-4d87-b105-1cdcc8d71111.png" width="300" height="95">
+
+</div>
 
 Netlify is used to continuously deploy my code or any changes, every time I push to the main branch, the website goes live with a new version. When a pull request is made in my workflow, netflify also checks if there are any warnings, and makes a preview for that specific pull request. This is beneficial because Netlify is incredibly quick and easy to use for getting started with my website, saving time and increasing productivity as a result. Netlify will also save more time as you can lock onto a main branch for main deployments. It can also deploy other branches and give you a URL to test those deploys, improving the amount of time it takes for you test your code before merging it to your main; Also giving you an easier option to manually test other branches. 
 
