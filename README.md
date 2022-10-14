@@ -2,6 +2,8 @@
 
 [![Node.js CI](https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml/badge.svg)](https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml)
 
+[![codecov](https://codecov.io/gh/EDGENortheastern/olaniyioshinusi-systems-testing/branch/main/graph/badge.svg?token=38qLxed5nm)](https://codecov.io/gh/EDGENortheastern/olaniyioshinusi-systems-testing)
+
 ## About
 
 <div align="center">
