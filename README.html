@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="coursework-for-systems-testing">Coursework for Systems Testing</h1>
+<p><a href="https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml"><img src="https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/actions/workflows/node.js.yml/badge.svg" alt="Node.js CI"></a></p>
+<p><a href="https://codecov.io/gh/EDGENortheastern/olaniyioshinusi-systems-testing"><img src="https://codecov.io/gh/EDGENortheastern/olaniyioshinusi-systems-testing/branch/main/graph/badge.svg?token=38qLxed5nm" alt="codecov"></a></p>
+<h2 id="about">About</h2>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/90407109/195615218-576a7c95-10fd-44f7-a54c-11a1f6cb7b35.jpg">
+</div>
+<p>The Body Mass Index (BMI) calculator is an application that allows the user to measure their body fat based on their height and weight. This gives the user the ability to work out if they are of a healthy weight based on how tall the user is and it applies to both adult men and women.
+This BMI calculator will give you an estimated number rounded to two decimal places. Below are some of the key features I aim to display.</p>
+<ul>
+<li>Inputs that the BMI Calculator will accept.</li>
+<li>Outputs that the BMI Calculator will display.</li>
+<li>Accuracy testing that the value displayed is indeed correct.</li>
+<li>A clickable button to give the user a result.</li>
+</ul>
+<h2 id="environments">Environments</h2>
+<p>Project has two environments, the Production environment and the Development environment. I tested features in the development environment.</p>
+<ul>
+<li><a href="https://ornate-chaja-fd77bd.netlify.app/">Live App</a></li>
+<li><a href="https://dev--ornate-chaja-fd77bd.netlify.app/">Dev Environment</a></li>
+</ul>
+<h2 id="%F0%9F%92%BC-project-management">💼 Project Management</h2>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/90407109/195608547-a226d783-9dca-4c58-b3a5-a77721829563.jpg" width="554" height="399">
+</div>
+<p>I used GitHub's Project Tracker for project management to manage issues and used the kanban methodology to maintain a workflow where I could continuously improve, visualise my workflow on a regular basis and sort tasks in order of priority.</p>
+<hr>
+<h2 id="heavyexclamationmark-prerequisites"><img class="emoji" alt="heavy_exclamation_mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAE6klEQVR4Xu2aTYhkVxmGn+/c/qnq6fnp6cxAYHQMkQhhJkZbCIRhMJqFguBGEZcSECQgcSWJi2FciiDoWvwBVy5caaCZxZAEBgQXLlyZRZyu7q7uru6qru76ufee8726jVT/LTTU6X7g7u7mPLzf+c75OCaJ80zgnHMh4ELAueZCwIWAGf6HdL/4+e+GZ2/dDVevcla80+Hq6uo7Uy2gt9W5d63R/M7s0hVw59QIxlttgOkWsD+udlhrLV/pdAFxWgT0Dg/TjWkvgXFhHzXLmlTtn2nxGIxTKpl2AZ7SRlWEJCsKTokBNRCN3tR3gVgUO44dRM6GJFxsTb2A8eFhJ0pdnbH+IxDd21NfAi+MRjtbly7tRfFcsNOXQASS2fQLeA7KJyltxMJW5jBkp0tAkjCpNfUCJOn9Z55ZTwLZ6TthBMoQ1qdeAADua6kICBCnF2BV9TQLAQphPQqSnWETdCWbn29ncRmq6rodEafFJSIcDuu6m0UCrCg2XVQuzRkn4ybc1Vvq9fayEFBW1XaabwxT0FzgeAwjOaRgnVU4fCUHAYPBYP9yo7GbxDU7wYAQEYgxtR9InkUCvg3jx+abTngeBxlHYoKE8BDWALIQgCRfXm6nABiIYzBIDu7eykcA4PLNmoL5EwQ4EAHMNrISkLBWQriMk4iCFONmVgKU0loMBbKTRIHjdd0IeQnwENYTImEchwS1GFaH1XZWY3FPabtGY0dgTP6AiIiw2xkO97NKwMi91xT7Dg1zJmKAA45vfh9GWSVgcTDoRui5AEATPgAHEqGNpKwEfF0q5dpOgB8hIAFR4O6bAFmVAEA01iMwayAmEyWiWStLAXJvpRCQgTOZhPCU8hSQzFpRwmXHJACKENbyLAFpIxkIMQkBtVSVMXbyfB8QQrt2+ZHxF8ish7SXZQKU0maaKUoXTU04AyREhO5gMOhlmYC6399NWD8e0QYdqOWd70GZpYB/wiB52sYEkxLgIKwlSVmWwAOp+sPSUjdGJxgfwwQ1ULtvAWQpAKBX138ZFWHfjugCCxbez1rAEH43LKs/HRnHstzm/8zFW2E+IR6/9triu/fv33jy6qvNcyVgdWXlK3/98v2f3Wo2f/vC9eu/X7525TdP7t17uLry0krWAv54587ce3fv/uT5ublfPZv8DXY730gb668X3e43PxXsB5+ZXfj14xdffCPbPeDR7dtv3VpYeLtwv7k7HFDHiCTMAvNzM9xYWGQf/tUZHbz5+ketP2eVgMc3b352PsYf1aPRzc1ul8FwSFmWVFVNWY45OBiw0d0jjEe3w7h++z//L2bVBvtl+bXrxqf7dU2VIgaYGQBgCBjXNUEQ0Je6Mb4MfJBNAlKY+UKVnHGaPBg3QMAoJaqY5gUvZZWAUunK2AOzgDgaySmBcUrLWQkYuu/PB6PAOA4BY4kR3s2qDQ7hyYGf/E6oBvryOJb9LS8BKb275+nDA9fHxuL+X2Pxrot+8vc6Bwd/z0rAaDhsl+4Pn3rq70iMJRIgIAIjibY7G6l+OoafPpCG2R2Efmx2uXHp0rcC/HAxhJcXzDCgBkbucSR9UEk/PxgOH/1SKrO8Db5ptrjYbN6ZKeyrJvtckBYU2POkf4xSehSr6sMJi8/rOvzQLOzA0myjcdmkGQ+hstGo/wupxyfAxTyAc82FgAsB/wYUs/wtqki7ugAAAABJRU5ErkJggg==" /> Prerequisites</h2>
+<p>This project requires npm to execute the files, so ensure that it is installed.</p>
+<h3 id="1-ensure-node-and-npm-are-installed-by-running-the-following-commands-in-your-terminal">1. Ensure node and npm are installed by running the following commands in your terminal:</h3>
+<pre class="hljs"><code><div>node -v
+</div></code></pre>
+<pre class="hljs"><code><div>npm -v
+</div></code></pre>
+<p>If they are not installed, follow the steps on <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">npm Docs</a>.</p>
+<h3 id="2-to-run-end-to-end-tests-please-install-serve-globally-in-your-machine">2. To run end-to-end tests, please install 'serve' globally in your machine:</h3>
+<pre class="hljs"><code><div>npm install -g serve
+</div></code></pre>
+<p>If you are getting some errors after using that command and you are on Linux/MacOS, try running it as a superuser (sudo)</p>
+<h3 id="3-afterwards-clone-this-repo">3. Afterwards, clone this repo:</h3>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing.git
+</div></code></pre>
+<p>Now, you should have everything that you need to proceed! Navigate into the folder you just cloned to find our code <img class="emoji" alt="smiley" src="data:image/png;base64,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" /></p>
+<h2 id="book-getting-started"><img class="emoji" alt="book" src="data:image/png;base64,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" /> Getting Started</h2>
+<h3 id="0-before-trying-out-any-of-the-next-commands">0. Before trying out any of the next commands:</h3>
+<pre class="hljs"><code><div>npm install
+</div></code></pre>
+<p>If you get some vulnerability warnings after executing this command, don't worry <img class="emoji" alt="wink" src="data:image/png;base64,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" />, it's the React team that has to do some catch-up...</p>
+<h3 id="1-in-the-project-directory-you-can-run">1. In the project directory, you can run:</h3>
+<pre class="hljs"><code><div>npm start
+</div></code></pre>
+<p>Runs the app in the development mode. <img class="emoji" alt="point_up_2" src="data:image/png;base64,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" /> <br>
+Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in your browser.</p>
+<p>The page will reload when you make changes.<br>
+You may also see any lint errors in the console.</p>
+<h3 id="2-to-run-logic-and-ui-tests-for-my-application-run-the-following-command">2. To run logic and UI tests for my application, run the following command:</h3>
+<pre class="hljs"><code><div>npm <span class="hljs-built_in">test</span>
+</div></code></pre>
+<pre class="hljs"><code><div>a
+</div></code></pre>
+<p>This launches the test runner in the interactive watch mode. <img class="emoji" alt="point_up_2" src="data:image/png;base64,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" /> <br>
+Clicking on the 'a' key runs all tests (excluding End-to-End tests).
+See the section about <a href="https://facebook.github.io/create-react-app/docs/running-tests">running tests</a> for more information.</p>
+<h3 id="3-to-view-full-tests-and-code-coverage-for-my-code">3. To view full tests and code coverage for my code:</h3>
+<pre class="hljs"><code><div>npm <span class="hljs-built_in">test</span> -- --coverage --watchAll=<span class="hljs-literal">false</span>
+</div></code></pre>
+<h3 id="4-to-run-our-e2e-tests">4. To run our E2E tests:</h3>
+<h4 id="note-that-the-following-command-might-be-different-depending-on-your-operating-system">Note that the following command might be different depending on your Operating System:</h4>
+<pre class="hljs"><code><div>npm run build
+</div></code></pre>
+<p>Builds the app for production to the <code>build</code> folder. <img class="emoji" alt="point_up_2" src="data:image/png;base64,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" /> <br>
+It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+<p>See the section about <a href="https://facebook.github.io/create-react-app/docs/deployment">deployment</a> for more information.</p>
+<pre class="hljs"><code><div>PORT=4571 serve -s build &amp; npm run <span class="hljs-built_in">test</span>:e2e
+</div></code></pre>
+<p>'PORT=4571' is used to set the port where the production server will be listening for incoming connections. I decided to use a very specific number so that it doesn't interfere with any of your servers <img class="emoji" alt="heart" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAMrUlEQVR4Xu1bC6wV1RVdZ+a+LxR9UAqI8lEpBCimCLZUUmkNbbSS0iYFU2wQQT4tVRAFbesvgpYiWqnVlAq1mNhgakybGFshtoJG8YMRQX6CAgIi8n2/O/fO3N21eTM9deY9594HBfncZOWMz+GevdZeZ5/PnTEigtP54xBnBDiNcUaATGsI3GBMuwrgEgMMBNCLbXsAhQDYDWBtAXj5AZF1x4rAt4zJDAIuFgJAXwfoDAAC7Cc2Eqsd4LV5IvWlcimpCM40prMA17vAj40xfQwABaLvMAaiSojUFoA3ACzxgaUUo7E1xG8xpo0AY1xgrAMMMkC5iREQ26cKv4QdLX5YZN8xF4Dkr3OB2Y4xXYwIokCMHUcIYgQCYxCIrC4As5id5SWSH+EA92aM6e+EMUbk3bAtxPosqBgi2wLgtt+I/OWY1ADavWKWMY8xkEUZoIsrggoAXc85BwNHjMDlM2bge/Pm4cr77sOwqVNx0RVXoHPnzigHEN47kNfP3mrMrYafYuzOG+8uA55hP/0zIqgsK8N5ffti8LhxGD57NkYsXoyRS5bgO3Pn4uv8W7fevVFJ8npvBujOWJ9kZwv0u47KAaOMKT8f+HOZMVcrGVXrvD59cNGUKehOotUUwZQrVesGP5dDw86d2PHCC1jLQLe//jr8MDt5kce2AJOfEglaErst8HiG/Tkqnuuix/Dh6Dd+PM4dMgSV7duDDoQUCoC6kMI4vKdx/35sX74cqx98MN7f4rnABOGnVQLcZsxvSf7GI5l0HAyaOBEDZ81CVadOyNfVIX/wIIRtIZttCorBOBUVyJx1Fso6dIDf0ICNzNSqOXNwqLYWYgxyIos2AZOsCFbs3qHYRgQ1Xbrga3fdhV4jR8LxPHh79iB/6BBAgREEEO2L4rvV1ch07IjKrl0RsL837r8frxFZ39chCF9k9r0it5csAG3/wwpjni5TC5LY0DvuwIDp0+HX1yP74YcofPwxApJHlA1CVYdCg2NgZSRR3aMH9rz6Kl6gaz7evh1oCuoPd4pMhiXv9iN5Zn6MZr4TXTbskUfQ4YILUL9pEwJmWEjaiYIOWwkBJsc5+2xU9eyJym7dsHbhQvz75pvRmM/DBwIfHKEizxctwE3GtK8G3qAAPVWAIdOmYSCz4X30EbyNGxEw8xpMNKQ1gCgwdYIACEQ043Dphrb9+uEQiSwbOxYH9u5VoRCI3PZLkV8DwD3GzCk35hdKvobD6tscOu2Y1foNGyDMpGsMDEmaqA/A9hf2GRDIZFBOwdsNGIA358/Hy/fcgzzjyQPrs8BgO02mCPArY26iFecr+V5Dh+LyJ5/ULKBhzRoY2t0ww0pekZiWQkAdQWhwUlWFLzCo3StWYAXF9EhKgHwAXFIA2maAF13Q0SQwlIF3GjQIDSSvsjqxflrqT3moSwIAlXROJQvj8muvxaZly+ADyAHXz2ENShVAx2IfZr8S+EobjufvPvEEvsgKXLdqFQqNjRQ5A8cGErNkMrACoYGpCFXnn48Njz6KdUuXKjkE7Efndl4PEAC9Od77TpqE7I4dMCRD4mFf6f0Vov5CEdpefDEOsG78c9Qo1HqeCvDKSuCb/xLxP3Ml+GUGU9a02sJ5l16KDiRfu3o1AhYgJa9FSGLkY8TDNhYsi2Dje++hx1VXoe6dd7D73XdRAQyKgu/Yqxd6clrV+gJ1mSWa3l8cFKHu7bdRM3gwul12GTY8/zxc4KvfIC8Aaz5TAF1xuYDLMYlzhw2Dt2sXfMJxnGh8Ay0FkBJYQWtH27bozWnNYaHax7qghNrTGRdMmADDolWgULS9JVd0fxZgnDpkPYrZmUncymEgIpU65FIFcKkSgSravw0XNN7770M0665rOygBEheBDspUVqIPCR9ctw4QQTsWSZdzemHfPpiiBE1C4qALPM46bWpqUMXv9snBBfoAQJoAnQlUc1pxmBGPSrps9QujMW0LEkoI2No3UItzONVweEFF8TydUnXMpwylFoknXUD46jiKXUHX1SsPoEuqAESFknJpebWsaLAkb1IsaT6DvCQLmLpKFy5WnOT8bkm38N/JwpssvgWizHGiYlqVKoAD5AkYjiOf41GzL7wuxAI1pVk0GXQxIhXXR5I4YGcExk8uUcxeMQLUKznxfc2QCgEQVqAUB6QIkHZfupDJfiWGQgR1QMjFARR1xQyBnQjHqS57HRYQ+H5I0tYAk5ItU6ILTAkOsbAZR0yAIFwh5sgj8Lyoz13FCLCJQJ7Zz37yCVwuScXzYMIvZWsXJ63NdhrBdPLp9idgDLJcenMGiETekCqAAOuVq18ouHXbtuk0olOXkocTQlKIHmtIqpuS9oe2dG/dBx807UsAD8UIkAPWlQMfAuh+mCu3Gm4uylyXivgxy1qItumF7ehJp5O39udWOcd1xeEtWyJhtnjAxlQB7hSpm2/MS2JM90bOzQfWrkXH/v0hOhUS+pHEMEi2CpNCyJRG1l43P+6tCEyYxrufy2GtAeQCEXmR3BpSBVD4wN8LwBgYg0NUMMO25sILm3Z4WlF1SVw6mdZPc8U6wHEgmYxWfRxYvx6HOYTJIXLF34o+FhdgmS+ys2BM14IIDm/eDGExacsDhyquEMGOoFMMhTCEnR2ar+rmaKa6lAWPxqIAs17QlSttX7t1K2q5eVPiftPZw2YXeKmkE6EHjXmgypjp1QCqRFQplOk1t7WVPO6q4EFHhtcux5oJz+lMCEs6dWosPeMkqzCExh6wQPvcpnskrLNWlpbPKXGikeTV81mRu6aJ3J3igMT8upDKTQqMqSaQaVJLO0Mjd1k5QotjWZs2cLnWLiMM192uWlAzEgmrooStoISPikpEp016reLqvkFIUs8kAyLPtUqebvRtHVDbqwAKzf6hAHi8VYeiDxmzuNqYcVUAKonyEBnCVYjA2OkRLqEilFVXw2FruKM06hCScFQY+wNKC6mXkLvRVRxEwQwLSRdIOlAwASRFspawJigICedCZIkGhchDzP60Vv005gHzykVG++oCwHZqs2QFiAgwSJ+IaoBLMtEJrqEICoSZJdGQt0SHq1rAFLr20FlHycLEdnn2vKD5adAn8tqKHAiAB1v92+BMkfULjHk4w8syvdnOs5Z0XJD4LzhKICQlxe8j7HeEVdykTINBCF9hRbh/hsi2VgugCIC5eZEf0QU9/ZCUE6kdE8FJELCiIAkrYJEbHrsfseQLFggUNvvvHgQWHPWvw9NF9rMW3JID/upaFyggSRGSCyNFykyQdpZgms+8JZ60fsDrG3VRd9QCKG4Uefr3xugPF2MzkQtsC7EAil0dFr99tm0CVoC8FQA54KGfiyw/pg9IFIBbciKbtYO8HW/WDSnbYlMkeaNIWUBZ4hHsDOCJvPUJcOcxf0KEiu71gQnswLMiEKkiWJhikFIP4sQJm3mRerbj1frHXADFz0RW+MDMSAA/4QQiORzSRUipDZL87iT5Jkxlot76vz4jNFlkgSfyp1xMhIQbSjnZKfbAw5JOLHzyIr/7qcjjx+UhKR+4gSKstCIQMQGIxDE6SrC/SZ7wWAFimWcs/9hFZx63p8SodB2JXZMVec+LO8GSt0hxQfP3tEw++DT5tfXAtRz32eMmgGKiyHYSvZoB7LM1IW1IpB+MJEkTLWd+N1mP4jS954Q8JzhB5M0c8JNGqt/ScBDbxrLdsgsKMcSJK9hnbR4YTTeuP47PCSZxvchzfzRmosMCZIxxmh/X6cfokuIAa30o+XwOGMu+V57YJ0WtCE9kgZkeAMI6oYXagHiBa2GB40eIsk6EfUwl+WeO75Oi6cNh/iJjvkQXzGy2qrd0ZNbixiZpe68p+7ezr4Un4lHZdBGAWxeLnEURJoVkE4TdsDXJ4pfc0VniyCpEHhgvMvtz+7C08LOd9mSWlnoavLVwokAmkbw3KqyeQmTRdSIzPvdPi3M+9g8C4yjCs0eyZokQcTGSpPMx22ebyD/F6yknzePy00UaKcI1FOHFbFQYLSzp5pC0/XN7gesmiuRPGgEU00QO+sDoBpHXIzI5i4QgNuuWfIPIygZgzM0i9SflCxOs1nsY+UgSeTtygiVpBfBillfQPatI/gdTRA6c1G+MTBXZRSLfp5XXNScCYa+t7d9spHDcfu87JV6ZIZFtOWaTxDbZwqhIks+JvNPIe7nE/eiUemdokshmn07wKEZE1ouDAjUAI0h+xyn50hQr+YY8cJXPYeHHZwWRrQFwpbrllH5rbLLIWnUCrb77v9MhSbMdQYG2HO94TtibozxmH+IAz4XuH85qv+a0em+QVn8lB4z2gVEnirzizLvDxBkBTmOcEeA/9BHphhUr8z8AAAAASUVORK5CYII=" /> (especially if you are testing multiple apps for some scholar reason?)</p>
+<h3 id="5-to-customise-your-react-configs-in-depth-and-detach-from-react-scripts">5. To customise your React configs in-depth and detach from react-scripts:</h3>
+<pre class="hljs"><code><div>$ npm run eject
+</div></code></pre>
+<p><strong>Note: this is a one-way operation. Once you <code>eject</code>, you can't go back!</strong></p>
+<p>If you aren't satisfied with the build tool and configuration choices, you can <code>eject</code> at any time. This command will remove the single build dependency from your project.</p>
+<p>Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except <code>eject</code> will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.</p>
+<p>You don't have to ever use <code>eject</code>. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.</p>
+<hr>
+<h1 id="%F0%9F%92%BB-coding-practice">💻 Coding Practice</h1>
+<p>Throughout this project I ensured that the code is easily readable, whilst still maintaining the correct naming conventions; by using the camelCase practice throughout the entire code, and while still making sure that that all lines are correctly indented, ensuring that any other programmer could still read and understand the code. Furthermore, the code also has comments on every line of code to ensure that anyone can understand what is happening at every step of the code. I also made sure the code had the correct indentations throughout the entire code.</p>
+<h3 id="camelcase">camelCase</h3>
+<p><img src="https://user-images.githubusercontent.com/90407109/195651654-9528187a-bcc9-4db0-8e80-462b8e94c9d3.jpg" alt="camelCase"></p>
+<h3 id="comments">Comments</h3>
+<p><img src="https://user-images.githubusercontent.com/90407109/195651690-8f7d671b-4bff-4ff8-84b2-f66a6cfee99b.jpg" alt="CommentImage"></p>
+<hr>
+<h3 id="%F0%9F%93%B7-regression-testing">📷 Regression Testing</h3>
+<p>I used regression testing to maintain code base consistency. Regression testing creates a snapshot of the DOM (HTML) for each of the components, if any of those components change it will throw an error if not the test will pass.</p>
+<h3 id="%F0%9F%93%96-react-testing-library">📖 React Testing library</h3>
+<p><img src="https://user-images.githubusercontent.com/90607602/149968583-1f49f002-711b-4ca7-9be0-a31edd29d1e8.png" alt="react testing library image"></p>
+<p>The react testing library is used for testing the UI in units. This is because react testing library is a set of helper functions that allow us to test React components without relying on their implementation details.</p>
+<h3 id="testing-logic">Testing Logic</h3>
+<p>For testing the logic of the website I used react testing library's Jest. Jest (standalone) is utilised to test the logic of the application, this is because Jest is an javascript testing framework designed with simplicity in mind and Jest supports projects coded using Babel, Typescript, Node, <strong>React</strong>, Angular, Vue and more; Making Jest an ideal testing framework for my project. I produced testing blocks that lead to huge code coverage using Jest within a short period of time. Unit testing using Jest makes my project more agile as it allows me to be assured that the code I have will not break easily as I have already found and prevented bugs earlier in the development cycle.</p>
+<h3 id="end-to-end-testing">End-to-End Testing</h3>
+<p>Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol. I used Puppeteer to automate End-to-End testing. I have also integrated React E2E Testing with Puppeteer into a GitHub action, which allowed me to test my code with Puppeteer whenever I push or make a pull request.</p>
+<h2 id="performance-and-accessibility-testing">Performance and Accessibility Testing</h2>
+<p>In order to improve the quality of the webpage, I used the Google Lighthouse tool to generate a report containing a summary of the quality of our application. Lighthouse is a free and open-source tool that can be accessed through the development console for Chromium-based browsers. There are 4 metrics which I have focussed on which are:</p>
+<ul>
+<li>Performance which is an aggregation of how the page progressed in aspects such as loading speed, time taken for loading basic frames and displaying meaningful content.</li>
+<li>Accessibility which is an aggregation of how accessible the website is through audio captions, button names and 'aria-' attributes.</li>
+<li>Best Practices which is an aggregation of many practices that have been deemed 'best' such as use of HTTPS and avoiding the use of deprecated code.</li>
+<li>SEO which is an aggregation of scores in features such as meta description, presence of titles, legible font sizes.</li>
+</ul>
+<p>The websites performance rating of 100 suggests it is highly optimised and as a result, the website will offer a streamlined and smoother experience giving the user a better experience as a whole when using our website, it also decreases the bounce rate of users who attempt to access the website incase it takes too long to load. Poor performance hurts the overall user experience and offers less incentive to stay.</p>
+<p>The accessibility rating of 100 improves our search engine optimisation results and makes it easier for each user to use the website regardless of age or disabililty. The website's design also includes contrasting colours. Users would be able to interact with the website/application properly without any problems while accessing it.</p>
+<p>The best practices rating of 100 suggests that the websites design is simple and easy to navigate.</p>
+<p>The search engine optimisation (SEO) rating of 100 is suggests the websites design attracts higher quality internet traffic and traffic will be directed to the website naturally without having to advertise it.</p>
+<p><img src="https://user-images.githubusercontent.com/90407109/195648614-1e60455c-f2e5-44ec-90dc-ed4afbe01da3.jpg" alt="DesktopAccessibilityPerformanceSEO"></p>
+<h2 id="manual-testing">Manual Testing</h2>
+<p>Manual testing was completed on the application. The purpose of Manual Testing is to identify any bugs, issues, or defects in the website. Manual software testing helps to find critical bugs in the website design such as features not working as intended or not working at all. This allows to debug the website and improve features which did not have necessary code implemented to fix specific bugs which may occur when the user is using my BMI calculator to calculate body mass index. Although Manual website Testing requires more effort, I realised it was imperative to check automation feasibility; Additionally, Manual Testing concepts do not require knowledge of any testing tool.</p>
+<p><a href="https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/files/9784610/BMI.Manual.Test.Script.xlsx">BMI Manual Test Script.xlsx</a></p>
+<h3 id="resolution-of-an-issue">Resolution of an Issue</h3>
+<p>This is an example of an issue which was discovered while manually testing the design.</p>
+<h2 id="continuous-integration--continuous-deployment">Continuous Integration / Continuous Deployment</h2>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/90607671/150118179-7c55890f-1df7-4d87-b105-1cdcc8d71111.png" width="300" height="95">
+</div>
+<p><img src="https://user-images.githubusercontent.com/90407109/195656455-40630bb7-e869-43d9-9587-14149a2065a1.jpg" alt="NetlifyScreenshot"></p>
+<p>Netlify is used to continuously deploy my code or any changes, every time I push to the main branch, the website goes live with a new version. When a pull request is made in my workflow, netflify also checks if there are any warnings, and makes a preview for that specific pull request. This is beneficial because Netlify is incredibly quick and easy to use for getting started with my website, saving time and increasing productivity as a result. Netlify will also save more time as you can lock onto a main branch for main deployments. It can also deploy other branches and give you a URL to test those deploys, improving the amount of time it takes for you test your code before merging it to your main; Also giving you an easier option to manually test other branches.</p>
+<h2 id="github-actions">GitHub Actions</h2>
+<p>GitHub Actions is used to automate the testing pipeline every time code is pushed or a request is made. This allowed me to create workflows that build and test every pull request to the repository, or deploy my merged pull requests to production. GitHub Actions also helped improve my workflow by automatically adding the appropriate labels.</p>
+<img src="https://user-images.githubusercontent.com/90407109/195565469-b888fa80-296c-426c-a819-37df7ab5d26f.jpg" width="554" height="399">
+<h3 id="for-additional-examples-of-github-actions-click-here">For additional examples of GitHub Actions click <a href="https://docs.github.com/en/actions">here</a></h3>
+<hr>
+<h2 id="learn-more">Learn More</h2>
+<p>You can learn more in the <a href="https://facebook.github.io/create-react-app/docs/getting-started">Create React App documentation</a>.</p>
+<p>To learn React, check out the <a href="https://reactjs.org/">React documentation</a>.</p>
+<h3 id="code-splitting">Code Splitting</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/code-splitting">https://facebook.github.io/create-react-app/docs/code-splitting</a></p>
+<h3 id="analyzing-the-bundle-size">Analyzing the Bundle Size</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size">https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size</a></p>
+<h3 id="making-a-progressive-web-app">Making a Progressive Web App</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app">https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app</a></p>
+<h3 id="advanced-configuration">Advanced Configuration</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/advanced-configuration">https://facebook.github.io/create-react-app/docs/advanced-configuration</a></p>
+<h3 id="deployment">Deployment</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/deployment">https://facebook.github.io/create-react-app/docs/deployment</a></p>
+<h3 id="npm-run-build-fails-to-minify"><code>npm run build</code> fails to minify</h3>
+<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify">https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify</a></p>
+
+</body>
+</html>
