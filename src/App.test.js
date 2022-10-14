@@ -14,6 +14,14 @@ it('checks that the App DOM is consistent', () => {
   expect(appTree).toMatchSnapshot();
 });
 
+test("renders H1", () => {
+  
+  render(<App/>);
+  const hOneElement = screen.getByText(/BMI Calculator/i);
+  expect(hOneElement).toBeInTheDocument();
+  
+});
+
 test("the weight input box is in the DOM", () => {
   
   render(<App/>);
