@@ -192,6 +192,8 @@ The search engine optimisation (SEO) rating of 100 is suggests the websites desi
 
 Manual testing was completed on the application. The purpose of Manual Testing is to identify any bugs, issues, or defects in the website. Manual software testing helps to find critical bugs in the website design such as features not working as intended or not working at all. This allows to debug the website and improve features which did not have necessary code implemented to fix specific bugs which may occur when the user is using my BMI calculator to calculate body mass index. Although Manual website Testing requires more effort, I realised it was imperative to check automation feasibility; Additionally, Manual Testing concepts do not require knowledge of any testing tool.
 
+[BMI Manual Test Script.xlsx](https://github.com/EDGENortheastern/olaniyioshinusi-systems-testing/files/9784610/BMI.Manual.Test.Script.xlsx)
+
 ### Resolution of an Issue
 
 This is an example of an issue which was discovered while manually testing the design.
